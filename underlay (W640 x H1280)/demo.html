@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Underlay Ad</title>
+
+
+  <script
+    src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
+  </script>
+
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html,
+    body {
+
+      margin: 0;
+
+      width: 100%;
+      height: 100%;
+
+      overflow: hidden;
+
+      background: transparent;
+
+    }
+
+
+    .ad {
+
+      position: relative;
+
+      width: 100vw;
+      height: 100vh;
+
+      overflow: hidden;
+
+      background: transparent;
+
+      cursor: pointer;
+
+    }
+
+
+    lottie-player {
+
+      position: absolute;
+
+      left: 50%;
+      top: 50%;
+
+      width: min(
+        320px,
+        92vw
+      );
+
+      height: min(
+        600px,
+        90vh
+      );
+
+      transform:
+        translate(-50%, -50%);
+
+    }
+
+
+    .close {
+
+      position: absolute;
+
+      top: 12px;
+      right: 12px;
+
+      width: 40px;
+      height: 40px;
+
+      border: none;
+
+      border-radius: 50%;
+
+      background:
+        rgba(0,0,0,.65);
+
+      color: white;
+
+      font-size: 22px;
+
+      cursor: pointer;
+
+      z-index: 10;
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <div
+    class="ad"
+    id="ad"
+  >
+
+
+    <lottie-player
+
+      id="lottie"
+
+      src="./data4.json"
+
+      background="transparent"
+
+      speed="1"
+
+      autoplay>
+
+    </lottie-player>
+
+
+    <button
+      class="close"
+      id="close"
+    >
+      ×
+    </button>
+
+
+  </div>
+
+
+  <script>
+
+    const CONFIG = {
+
+      adType:
+        "underlay",
+
+      clickUrl:
+        "https://carlsbergstore.my.canva.site/angkor-together-as-fan",
+
+      closeOnComplete:
+        true
+
+    };
+
+
+    const ad =
+      document.getElementById(
+        "ad"
+      );
+
+
+    const lottie =
+      document.getElementById(
+        "lottie"
+      );
+
+
+    const close =
+      document.getElementById(
+        "close"
+      );
+
+
+    /*
+     * ======================================
+     * SEND MESSAGE TO DEMO
+     * ======================================
+     */
+
+    function send(type, extra = {}) {
+
+      if (
+        window.parent &&
+        window.parent !== window
+      ) {
+
+        window.parent.postMessage(
+          {
+            type,
+            adType:
+              CONFIG.adType,
+            ...extra
+          },
+          "*"
+        );
+
+      }
+
+    }
+
+
+    /*
+     * ======================================
+     * IMPRESSION
+     * ======================================
+     */
+
+    send(
+      "AD_IMPRESSION"
+    );
+
+
+    /*
+     * ======================================
+     * CLICK
+     * ======================================
+     */
+
+    ad.addEventListener(
+      "click",
+      function(event) {
+
+        if (
+          event.target === close
+        ) {
+
+          return;
+
+        }
+
+
+        send(
+          "AD_CLICK",
+          {
+            url:
+              CONFIG.clickUrl
+          }
+        );
+
+      }
+    );
+
+
+    /*
+     * ======================================
+     * CLOSE
+     * ======================================
+     */
+
+    close.addEventListener(
+      "click",
+      function(event) {
+
+        event.stopPropagation();
+
+        send(
+          "AD_CLOSE"
+        );
+
+        ad.style.display =
+          "none";
+
+      }
+    );
+
+
+    /*
+     * ======================================
+     * LOTTIE COMPLETE
+     * ======================================
+     */
+
+    lottie.addEventListener(
+      "complete",
+      function() {
+
+        if (
+          CONFIG.closeOnComplete
+        ) {
+
+          send(
+            "AD_CLOSE"
+          );
+
+          ad.style.display =
+            "none";
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>

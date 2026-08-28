@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Khmer Daily News - Demo (with Desktop & Mobile Top Banner)</title>
+    <style>
+        body { font-family: 'Kantumruy Pro', Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f2f5; }
+
+        .container { max-width: 800px; margin: 20px auto; padding: 20px; background-color: #fff; box-shadow: 0 0 15px rgba(0,0,0,0.05); }
+
+        header { text-align: center; padding: 20px 0; border-bottom: 3px solid #0056b3; }
+        header h1 { margin: 0; color: #0056b3; font-size: 28px; }
+
+        .post { padding: 20px 0; }
+        .post h2 { color: #1a1a1a; line-height: 1.4; font-size: 24px; }
+        .post p { line-height: 1.8; color: #333; margin-bottom: 15px; }
+        .date-meta { color: #888; font-size: 0.9em; margin-bottom: 15px; }
+
+        footer { text-align: center; padding: 20px 0; border-top: 1px solid #ddd; color: #777; font-size: 14px; }
+
+        .sknteam_image { text-align: center; margin: 20px 0; }
+        .sknteam_image img { width: 100%; max-width: 500px; border-radius: 4px; }
+
+        /* MR1 Ad Unit (in-article) */
+        .ad-mr1 { display: flex; flex-direction: column; align-items: center; margin: 20px auto; width: fit-content; }
+        .ad-mr1-slot { width: 300px; height: 250px; overflow: hidden; border: 1px solid #e0e0e0; background: #f9f9f9; display:flex; align-items:center; justify-content:center; }
+        .ad-mr1-slot iframe { width: 300px; height: 250px; border: none; display:block; }
+
+        /* Top banner: wrapper and inner container */
+        .banner { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; display:flex; align-items:center; justify-content:center; box-sizing: border-box; padding-top: env(safe-area-inset-top); background: transparent; }
+        .banner-inner { width: 100%; max-width: 1350px; height: 50px; }
+        .banner-inner iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+        /* Default page padding for mobile */
+        .page-content { padding-top: calc(50px + env(safe-area-inset-top)); }
+
+        /* Desktop: make banner 1350x218 */
+        @media (min-width: 992px) {
+            .banner-inner { height: 218px; }
+            .page-content { padding-top: calc(218px + env(safe-area-inset-top)); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Banner (loads the ad asset index.html which is 1350x218 on desktop) -->
+    <div class="banner" role="complementary" aria-label="Top banner ad">
+        <div class="banner-inner">
+            <iframe src="./index.html" title="Top Banner Ad" scrolling="no" aria-hidden="false"></iframe>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="container">
+            <header><h1>សារព័ត៌មាន Khmer Daily</h1></header>
+
+            <div class="post">
+                <div class="date-meta">ថ្ងៃព្រហស្បតិ៍ ទី៩ ខែមេសា ឆ្នាំ២០២៦</div>
+
+                <h2>ត្រៀមរៀបចំព្រឹត្តិការណ៍ "អង្គរសង្ក្រាន្ត" ដ៏ធំសម្បើមនៅខេត្តសៀមរាប ដើម្បីអបអរសាទរបុណ្យចូលឆ្នាំថ្មី</h2>
+
+                <div class="sknteam_image"><img src="https://sknteam.com/media/ai_cambodia.jpeg" alt="News Image" /></div>
+
+                <p><strong>ខេត្តសៀមរាប៖</strong> អាជ្ញាធរខេត្តសៀមរាបបានប្រកាសថា ត្រៀមខ្លួនរួចជាស្រេចក្នុងការរៀបចំព្រឹត្តិការណ៍ "អង្គរសង្ក្រាន្ត" ឆ្នាំ២០២៦ ខាងមុខនេះ។ ព្រឹត្តិការណ៍នេះនឹងនាំមកនូវការបង្ហាញវប្បធម៌ខ្មែរដ៏សម្បូរបែប ដើម្បីទទួលស្វាគមន៍ភ្ញៀវទេសចរជាតិ និងអន្តរជាតិ។</p>
+
+                <p>លោកអភិបាលខេត្តបានបញ្ជាក់ថា ការរៀបចំនៅឆ្នាំនេះនឹងមានភាពខុសប្លែកពីឆ្នាំមុនៗ ដោយមានការបន្ថែមនូវតំបន់កម្សាន្តថ្មីៗ និងការតាំងពិព័រណ៍ផលិតផលក្នុងស្រុកមកពីគ្រប់ខេត្តក្រុង។</p>
+
+
+                <p>ទន្ទឹមនឹងនេះដែរ កម្លាំងសមត្ថកិច្ចគ្រប់លំដាប់ថ្នាក់បានត្រៀមលក្ខណៈរួចជាស្រេច ដើម្បីការពារសន្តិសុខ និងសណ្តាប់ធ្នាប់ជូនបងប្អូនប្រជាពលរដ្ឋ។</p>
+
+                <div class="sknteam_image"><img src="https://sknteam.com/media/ai_cambodia.jpeg" alt="Footer Logo" /></div>
+            </div>
+
+            <footer>រក្សាសិទ្ធិគ្រប់យ៉ាង &copy; 2026 Khmer Daily News</footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

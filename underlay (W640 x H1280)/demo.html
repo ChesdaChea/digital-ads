@@ -1,306 +1,158 @@
 <!doctype html>
-<html lang="en">
+<html lang="km">
 
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>Underlay Ad</title>
-
-
-  <script
-    src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
-  </script>
-
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khmer Daily News - Demo</title>
   <style>
-
-    * {
-      box-sizing: border-box;
-    }
-
-
-    html,
     body {
-
+      font-family: 'Kantumruy Pro', 'Arial', sans-serif;
       margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+    }
 
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 3px solid #0056b3;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #0056b3;
+      font-size: 28px;
+    }
+
+    .post {
+      padding: 20px 0;
+    }
+
+    .post h2 {
+      color: #1a1a1a;
+      line-height: 1.4;
+      font-size: 24px;
+    }
+
+    .post p {
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .date-meta {
+      color: #888;
+      font-size: 0.9em;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid #ddd;
+      color: #777;
+      font-size: 14px;
+    }
+
+    .sknteam_image {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .sknteam_image img {
       width: 100%;
-      height: 100%;
-
-      overflow: hidden;
-
-      background: transparent;
-
+      max-width: 500px;
+      border-radius: 4px;
     }
 
-
-    .ad {
-
-      position: relative;
-
-      width: 100vw;
-      height: 100vh;
-
-      overflow: hidden;
-
-      background: transparent;
-
-      cursor: pointer;
-
-    }
-
-
-    lottie-player {
-
+    /* Ad Styles retained from your original template */
+    .thestresstnews-container {
+      width: 100%;
       position: absolute;
-
-      left: 50%;
-      top: 50%;
-
-      width: min(
-        320px,
-        92vw
-      );
-
-      height: min(
-        600px,
-        90vh
-      );
-
-      transform:
-        translate(-50%, -50%);
-
+      z-index: 100;
+      left: 0;
     }
 
+    .thestresstnews-bg {
+      background-image: url(https://sknteam.com/media/ai_cambodia.jpeg);
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 350px;
+    }
 
-    .close {
-
-      position: absolute;
-
-      top: 12px;
-      right: 12px;
-
-      width: 40px;
-      height: 40px;
-
-      border: none;
-
-      border-radius: 50%;
-
-      background:
-        rgba(0,0,0,.65);
-
+    .thestresstnews-install-button {
+      background-color: #1a73e8;
       color: white;
-
-      font-size: 22px;
-
-      cursor: pointer;
-
-      z-index: 10;
-
+      padding: 8px;
+      border-radius: 20px;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      font-weight: 600;
     }
-
   </style>
-
 </head>
 
-
 <body>
+  <div class="container">
+    <header>
+      <h1>សារព័ត៌មាន Khmer Daily</h1>
+    </header>
 
+    <div class="post">
+      <div class="date-meta">ថ្ងៃព្រហស្បតិ៍ ទី៩ ខែមេសា ឆ្នាំ២០២៦</div>
 
-  <div
-    class="ad"
-    id="ad"
-  >
+      <h2>ត្រៀមរៀបចំព្រឹត្តិការណ៍ "អង្គរសង្ក្រាន្ត" ដ៏ធំសម្បើមនៅខេត្តសៀមរាប ដើម្បីអបអរសាទរបុណ្យចូលឆ្នាំថ្មី</h2>
 
+      <div class="sknteam_image">
+        <img src="https://sknteam.com/media/ai_cambodia.jpeg" alt="News Image" />
+      </div>
 
-    <lottie-player
+      <p>
+        <strong>ខេត្តសៀមរាប៖</strong> អាជ្ញាធរខេត្តសៀមរាបបានប្រកាសថា ត្រៀមខ្លួនរួចជាស្រេចក្នុងការរៀបចំព្រឹត្តិការណ៍
+        "អង្គរសង្ក្រាន្ត" ឆ្នាំ២០២៦ ខាងមុខនេះ។ ព្រឹត្តិការណ៍នេះនឹងនាំមកនូវការបង្ហាញវប្បធម៌ខ្មែរដ៏សម្បូរបែប
+        ល្បែងប្រជាប្រិយ និងការប្រគំតន្ត្រីខ្នាតធំដើម្បីទទួលស្វាគមន៍ភ្ញៀវទេសចរជាតិ និងអន្តរជាតិ។
+      </p>
 
-      id="lottie"
+      <p>
+        លោកអភិបាលខេត្តបានបញ្ជាក់ថា ការរៀបចំនៅឆ្នាំនេះនឹងមានភាពខុសប្លែកពីឆ្នាំមុនៗ ដោយមានការបន្ថែមនូវតំបន់កម្សាន្តថ្មីៗ
+        និងការតាំងពិព័រណ៍ផលិតផលក្នុងស្រុកមកពីគ្រប់ខេត្តក្រុង។ នេះគឺជាឱកាសដ៏ល្អក្នុងការបង្ហាញពីសន្តិភាព
+        និងការរីកចម្រើននៃវិស័យទេសចរណ៍នៅក្នុងតំបន់សៀមរាបអង្គរ។
+      </p>
 
-      src="./data4.json"
+      <div data-demo-link="https://thestreetnews.sgp1.cdn.digitaloceanspaces.com/adshtml/May_2025/Singha/underlay/v1/index.html?ver=2023" data-link="https://www.facebook.com/KaiZaabKH">
+        <script src="https://thestreetnews.sgp1.cdn.digitaloceanspaces.com/adshtml/resources/thestreetnews-mobile-underlay-script2.js"></script>
+      </div>
 
-      background="transparent"
+      <p>
+        ទន្ទឹមនឹងនេះដែរ កម្លាំងសមត្ថកិច្ចគ្រប់លំដាប់ថ្នាក់បានត្រៀមលក្ខណៈរួចជាស្រេច ដើម្បីការពារសន្តិសុខ
+        និងសណ្តាប់ធ្នាប់ជូនបងប្អូនប្រជាពលរដ្ឋ។ អាជ្ញាធរក៏បានអំពាវនាវដល់ម្ចាស់អាជីវកម្មសេវាកម្មទេសចរណ៍ទាំងអស់
+        កុំឲ្យមានការដំឡើងថ្លៃហួសហេតុក្នុងអំឡុងពេលបុណ្យប្រពៃណីជាតិនេះ។
+      </p>
 
-      speed="1"
+      <p>
+        គួរបញ្ជាក់ផងដែរថា ព្រឹត្តិការណ៍អង្គរសង្ក្រាន្តមិនត្រឹមតែជាការសប្បាយរីករាយប៉ុណ្ណោះទេ
+        ប៉ុន្តែវាក៏ជាការរួមចំណែកយ៉ាងសំខាន់ក្នុងការថែរក្សា
+        និងលើកកម្ពស់មរតកវប្បធម៌ដូនតាខ្មែរឲ្យកាន់តែល្បីល្បាញលើឆាកអន្តរជាតិ។
+      </p>
 
-      autoplay>
+      <div class="sknteam_image">
+        <img src="https://sknteam.com/media/ai_cambodia.jpeg" alt="Footer Logo" />
+      </div>
+    </div>
 
-    </lottie-player>
-
-
-    <button
-      class="close"
-      id="close"
-    >
-      ×
-    </button>
-
-
+    <footer>រក្សាសិទ្ធិគ្រប់យ៉ាង &copy; 2026 Khmer Daily News</footer>
   </div>
-
-
-  <script>
-
-    const CONFIG = {
-
-      adType:
-        "underlay",
-
-      clickUrl:
-        "https://carlsbergstore.my.canva.site/angkor-together-as-fan",
-
-      closeOnComplete:
-        true
-
-    };
-
-
-    const ad =
-      document.getElementById(
-        "ad"
-      );
-
-
-    const lottie =
-      document.getElementById(
-        "lottie"
-      );
-
-
-    const close =
-      document.getElementById(
-        "close"
-      );
-
-
-    /*
-     * ======================================
-     * SEND MESSAGE TO DEMO
-     * ======================================
-     */
-
-    function send(type, extra = {}) {
-
-      if (
-        window.parent &&
-        window.parent !== window
-      ) {
-
-        window.parent.postMessage(
-          {
-            type,
-            adType:
-              CONFIG.adType,
-            ...extra
-          },
-          "*"
-        );
-
-      }
-
-    }
-
-
-    /*
-     * ======================================
-     * IMPRESSION
-     * ======================================
-     */
-
-    send(
-      "AD_IMPRESSION"
-    );
-
-
-    /*
-     * ======================================
-     * CLICK
-     * ======================================
-     */
-
-    ad.addEventListener(
-      "click",
-      function(event) {
-
-        if (
-          event.target === close
-        ) {
-
-          return;
-
-        }
-
-
-        send(
-          "AD_CLICK",
-          {
-            url:
-              CONFIG.clickUrl
-          }
-        );
-
-      }
-    );
-
-
-    /*
-     * ======================================
-     * CLOSE
-     * ======================================
-     */
-
-    close.addEventListener(
-      "click",
-      function(event) {
-
-        event.stopPropagation();
-
-        send(
-          "AD_CLOSE"
-        );
-
-        ad.style.display =
-          "none";
-
-      }
-    );
-
-
-    /*
-     * ======================================
-     * LOTTIE COMPLETE
-     * ======================================
-     */
-
-    lottie.addEventListener(
-      "complete",
-      function() {
-
-        if (
-          CONFIG.closeOnComplete
-        ) {
-
-          send(
-            "AD_CLOSE"
-          );
-
-          ad.style.display =
-            "none";
-
-        }
-
-      }
-    );
-
-  </script>
-
 </body>
 
 </html>

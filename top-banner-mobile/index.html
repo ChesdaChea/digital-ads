@@ -1,51 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Lottie 400x100 Ad</title>
+    <script type="text/javascript">
+        var clickTag = "http://www.google.com";
+    </script>
+
     <style>
-        html, body {
+        html,
+        body {
             margin: 0;
             padding: 0;
+
+            width: 100%;
             height: 100%;
+
             background: transparent;
         }
+
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+
+        /* ==========================================
+           AD ROOT
+        ========================================== */
 
         .ad-root {
             width: 400px;
             height: 100px;
+
             max-width: 100%;
+
             box-sizing: border-box;
+
             overflow: hidden;
+
             background: transparent;
-        }
 
-        lottie-player {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-
-        .ad-root {
             cursor: pointer;
         }
-    </style>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script>
-        var clickTag = "https://www.google.com";
-        function openClickTag() {
-            window.open(clickTag, '_blank', 'noopener,noreferrer');
+
+
+        /* ==========================================
+           LOTTIE
+        ========================================== */
+
+        lottie-player {
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            /* Let .ad-root receive the click */
+            pointer-events: none;
         }
-        document.addEventListener('DOMContentLoaded', function() {
-            var root = document.querySelector('.ad-root');
-            if (root) root.addEventListener('click', openClickTag);
-        });
+
+
+        /* ==========================================
+           MOBILE
+        ========================================== */
+
+        @media (max-width: 400px) {
+
+            .ad-root {
+                width: 100%;
+
+                max-width: 400px;
+
+                height: 100px;
+            }
+
+            lottie-player {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+
+
+    <!-- ==========================================
+         LOTTIE PLAYER
+    ========================================== -->
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
     </script>
+
 </head>
+
+
 <body>
-    <div class="ad-root">
-        <lottie-player src="./data.json" background="transparent" speed="1" loop autoplay></lottie-player>
-    </div>
+
+
+    <!-- ==========================================
+         LOTTIE AD
+    ========================================== -->
+
+    <!-- <div class="ad-root" role="banner" aria-label="Advertisement">
+
+        <lottie-player src="./data.json" background="transparent" speed="1" loop autoplay>
+        </lottie-player>
+
+    </div> -->
+
+
+    <!-- ==========================================
+         YOUR SCRIPT
+    ========================================== -->
+
+    <script src="./script.js"></script>
+
+
 </body>
+
 </html>

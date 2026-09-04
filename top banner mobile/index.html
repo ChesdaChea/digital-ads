@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<meta name="ad.size" content="width=400,height=100">
+
+	<script type="text/javascript">
+		var clickTag = "http://www.google.com";
+	</script>
+
+	<title>Banner</title>
+
+	<style>
+		/* ==========================================
+           RESET
+        ========================================== */
+
+		* {
+			box-sizing: border-box;
+		}
+
+		html,
+		body {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			color: #000;
+			overflow-x: hidden;
+		}
+
+		/* ==========================================
+           ANIMATION CONTAINER
+        ========================================== */
+
+		#anim {
+			width: 100%;
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+
+		/* ==========================================
+           CLICK AREA
+        ========================================== */
+
+		.banner-link {
+			display: block;
+			width: 100%;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		/* ==========================================
+           LOTTIE PLAYER
+           4:1 RATIO
+        ========================================== */
+
+		lottie-player {
+			display: block;
+
+			width: 100% !important;
+			height: auto !important;
+
+			aspect-ratio: 4 / 1;
+
+			margin: 0;
+			padding: 0;
+		}
+
+		/* ==========================================
+           MOBILE
+        ========================================== */
+
+		@media (max-width: 600px) {
+			#anim {
+				width: 100%;
+				max-width: 100%;
+			}
+
+			lottie-player {
+				width: 100% !important;
+				height: auto !important;
+				aspect-ratio: 4 / 1;
+			}
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div id="anim">
+
+		<a class="banner-link" href="javascript:void(window.open(clickTag))">
+
+			<lottie-player src="./data2.json" background="transparent" speed="1" loop autoplay>
+			</lottie-player>
+
+		</a>
+
+	</div>
+
+
+	<!-- Lottie Player -->
+	<script src="player.js"></script>
+
+</body>
+
+</html>
+```

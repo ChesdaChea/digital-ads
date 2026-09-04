@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottie 400x100 Ad</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: transparent;
+        }
+
+        .ad-root {
+            width: 400px;
+            height: 100px;
+            max-width: 100%;
+            box-sizing: border-box;
+            overflow: hidden;
+            background: transparent;
+        }
+
+        lottie-player {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .ad-root {
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+        var clickTag = "https://www.google.com";
+        function openClickTag() {
+            window.open(clickTag, '_blank', 'noopener,noreferrer');
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            var root = document.querySelector('.ad-root');
+            if (root) root.addEventListener('click', openClickTag);
+        });
+    </script>
+</head>
+<body>
+    <div class="ad-root">
+        <lottie-player src="./data.json" background="transparent" speed="1" loop autoplay></lottie-player>
+    </div>
+</body>
+</html>
